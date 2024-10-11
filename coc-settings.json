@@ -1,0 +1,200 @@
+{
+    "yank.enableCompletion": true,
+    "codeLens.enable": true,
+    "inlayHint.enable": true,
+    "inlayHint.refreshOnInsertMode": false,
+    "semanticTokens.enable": true,
+    "codeLens.position": "eol",
+    "lightbulb.enableSign": true,
+    "lightbulb.text": {
+      "default": "💡",
+      "quickfix": " "
+    },
+    "codeLens.subseparator": "|",
+    "translator.engines": ["bing", "google", "youdao"],
+    "clangd.enabled": true,
+    "clangd.path":"/usr/bin",
+    "clangd.disableCompletion": false,
+    "rust-analyzer.server.path": "~/.cargo/bin/rust-analyzer",
+    "diagnostic.floatConfig": { "border": true },
+    "diagnostic.hintSign": "💡",
+    "diagnostic.warningSign": " ",
+    "diagnostic.infoSign": " ",
+    "diagnostic.errorSign": ">>",
+    "clangd.arguments": [
+      "--completion-style=detailed",
+      "--background-index",
+      "--suggest-missing-includes",
+      "--all-scopes-completion",
+      "--header-insertion=iwyu",
+      "--offset-encoding=utf-32",
+      "--enable-config",
+      "-log=verbose"
+    ],
+    "suggest.completionItemKindLabels": {
+      "text": "🐢",
+      "method": "󰆧 ",
+      "file": "󰈙 ",
+      "module": " ",
+      "class": "󰌗 ",
+      "property": " ",
+      "field": " ",
+      "constructor": " ",
+      "enum": "󰕘 ",
+      "interface": " ",
+      "function": "󰡱 ",
+      "variable": "󰆧 ",
+      "constant": "󰏿 ",
+      "operator": "󰆕 ",
+      "enumMember": "󰕘 ",
+      "unit": " ",
+      "value": " ",
+      "folder": " ",
+      "struct": "󰌗 ",
+      "typeParameter": "󰊄 ",
+      "event": " ",
+      "snippet": "S",
+      "keyword": "󰌋 ",
+      "color": "󰏘 ",
+      "reference": "※ ",
+      "default": "🐶"
+    },
+    "diagnostic.virtualText": false,
+    "coc.preferences.formatOnSave": false,
+    "hover.floatConfig": { "border": true },
+    "suggest.removeDuplicateItems": true,
+    "suggest.labelMaxLength": 60,
+    "suggest.triggerAfterInsertEnter": true,
+    "suggest.snippetIndicator": "🐶",
+    "go.goplsOptions": {
+      "staticcheck": true,
+      "usePlaceholders": true,
+      "completeFunctionCalls": true
+    },
+    "pyright.enable": true,
+    "pyright.server": "~/.local/share/nvim/mason/bin/pyright-langserver",
+    "jedi.enable": true,
+    "jedi.startupMessage": false,
+    "jedi.markupKindPreferred": "markdown",
+    "jedi.trace.server": "verbose",
+    "jedi.jediSettings.autoImportModules": [],
+    "jedi.jediSettings.caseInsensitiveCompletion": true,
+    "jedi.jediSettings.debug": false,
+    "jedi.executable.command": "~/.local/share/nvim/mason/bin/jedi-language-server",
+    "jedi.executable.args": [],
+    "jedi.codeAction.nameExtractFunction": "jls_extract_def",
+    "jedi.codeAction.nameExtractVariable": "jls_extract_var",
+    "jedi.completion.disableSnippets": false,
+    "jedi.completion.resolveEagerly": false,
+    "jedi.completion.ignorePatterns": [],
+    "jedi.diagnostics.enable": true,
+    "jedi.diagnostics.didOpen": true,
+    "jedi.diagnostics.didChange": true,
+    "jedi.diagnostics.didSave": true,
+    "jedi.hover.enable": true,
+    "jedi.hover.disable.keyword.all": false,
+    "jedi.hover.disable.keyword.names": [],
+    "jedi.hover.disable.keyword.fullNames": [],
+    "jedi.workspace.extraPaths": [],
+    "jedi.workspace.symbols.maxSymbols": 20,
+    "jedi.workspace.symbols.ignoreFolders": [
+      ".nox",
+      ".tox",
+      ".venv",
+      "__pycache__",
+      "venv"
+    ],
+    "tsserver.trace.server": "verbose",
+    "javascript.validate.enable": false,
+    "rust-analyzer.enable": true,
+    "rust-analyzer.lens.references.adt.enable": true,
+    "rust-analyzer.lens.references.trait.enable": true,
+    "rust-analyzer.lens.references.method.enable": true,
+    "rust-analyzer.lens.references.enumVariant.enable": true,
+    "rust-analyzer.lens.enable": false,
+    "rust-analyzer.lens.location": "above_name",
+    "rust-analyzer.inlayHints.parameterHints.enable": true,
+    "rust-analyzer.inlayHints.typeHints.enable": true,
+    "rust-analyzer.inlayHints.renderColons": true,
+    "rust-analyzer.inlayHints.chainingHints.enable": false,
+    "rust-analyzer.inlayHints.reborrowHints.enable": "never",
+    "rust-analyzer.inlayHints.closingBraceHints.enable": true,
+    "rust-analyzer.inlayHints.discriminantHints.enable": "fieldless",
+    "rust-analyzer.procMacro.enable": true,
+    "rust-analyzer.trace.server": "verbose",
+    "rust-analyzer.cargo.unsetTest": ["core"],
+    "rust-analyzer.debug.runtime": "vimspector",
+    "rust-analyzer.debug.vimspector.configuration.name": "rust:launch",
+    "rust-analyzer.diagnostics.enable": true,
+    "rust-analyzer.completion.postfix.enable": true,
+    "rust-analyzer.workspace.symbol.search.scope": "workspace_and_dependencies",
+    "rust-analyzer.terminal.startinsert": false,
+    "languageserver": {
+      "haskell": {
+        "command": "haskell-language-server-wrapper",
+        "args": ["--lsp"],
+        "rootPatterns": [
+          "*.cabal",
+          "stack.yaml",
+          "cabal.project",
+          "package.yaml",
+          "hie.yaml"
+        ],
+        "filetypes": ["haskell", "lhaskell"],
+        "settings": {
+          "haskell": {
+            "plugin": {
+              "class": {
+                "codeLensOn": true
+              },
+              "importLens": {
+                "codeLensOn": true
+              },
+              "refineImports": {
+                "codeLensOn": true
+              },
+              "tactics": {
+                "codeLensOn": true
+              },
+              "moduleName": {
+                "globalOn": true
+              },
+              "eval": {
+                "globalOn": true
+              },
+              "ghcide-type-lenses": {
+                "globalOn": true
+              },
+              "stan": { "globalOn": true }
+            },
+            "checkParents": "CheckOnSave",
+            "checkProject": true,
+            "maxCompletions": 40,
+            "formattingProvider": "ormolu"
+          }
+        }
+      },
+      "systemstp": {
+        "filetypes": ["stp"],
+        "command": "stap",
+        "args": ["--language-server"]
+      },
+      "ocaml-lsp": {
+        "command": "opam",
+        "args": ["config", "exec", "--", "ocamllsp"],
+        "filetypes": ["ocaml", "reason"]
+      }
+    },
+    "snippets.ultisnips.directories": [
+      "$HOME/.local/share/nvim/lazy/vim-snippets/UltiSnips/",
+      "$HOME/.config/nvim/UltiSnips"
+    ],
+    "snippets.userSnippetsDirectory": "~/.config/nvim/Ultisnips",
+    "json.schemas": [
+      {
+        "fileMatch": [".vimspector.json"],
+        "url": "https://puremourning.github.io/vimspector/schema/vimspector.schema.json"
+      }
+    ],
+    "snippets.ultisnips.pythonPrompt": false
+  }
