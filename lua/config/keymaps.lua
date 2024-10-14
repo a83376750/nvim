@@ -1,18 +1,22 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
-
 -- This file is automatically loaded by lazyvim.config.init
 
 -- DO NOT USE `LazyVim.safe_keymap_set` IN YOUR OWN CONFIG!!
--- use `map` instead
+-- use `vim.keymap.set` instead
+if true then
+  return
+end
+
+
 local map = LazyVim.safe_keymap_set
 
 -- better up/down
--- map({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
--- map({ "n", "x" }, "<Down>", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
--- map({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { desc = "Up", expr = true, silent = true })
--- map({ "n", "x" }, "<Up>", "v:count == 0 ? 'gk' : 'k'", { desc = "Up", expr = true, silent = true })
+map({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
+map({ "n", "x" }, "<Down>", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
+map({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { desc = "Up", expr = true, silent = true })
+map({ "n", "x" }, "<Up>", "v:count == 0 ? 'gk' : 'k'", { desc = "Up", expr = true, silent = true })
 
 -- Move to window using the <ctrl> hjkl keys
 map("n", "<C-h>", "<C-w>h", { desc = "Go to Left Window", remap = true })
@@ -192,35 +196,3 @@ map("n", "<leader><tab><tab>", "<cmd>tabnew<cr>", { desc = "New Tab" })
 map("n", "<leader><tab>]", "<cmd>tabnext<cr>", { desc = "Next Tab" })
 map("n", "<leader><tab>d", "<cmd>tabclose<cr>", { desc = "Close Tab" })
 map("n", "<leader><tab>[", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
-
--- -- 开关大纲视图
--- map("n", "gso", "<cmd>AerialToggle!<CR>", { desc = "Toggle aerial outline" })
--- -- 查找类型定义
--- map("n", "gy", "<cmd>Telescope lsp_type_definitions<CR>", { desc = 'Goto type definition' })
--- -- 查找所有引用
--- map("n", "gr", "<cmd>Telescope lsp_references<CR>", { desc = 'Find references' })
--- -- 查找函数实现
--- map("n", "gY", "<cmd>Telescope lsp_implementations<CR>", { desc = 'Find implementations' })
--- -- 查看全部
--- map("n", "gz", "<cmd>Trouble lsp toggle<CR>")
--- -- 查看类型继承图
--- map("n", "gst", function ()
---     vim.lsp.buf.typehierarchy("subtypes")
--- end, { desc = 'List derived class hierarchy' })
--- map("n", "gsT", function ()
---     vim.lsp.buf.typehierarchy("supertypes")
--- end, { desc = 'List base class hierarchy' })
--- -- 头文件/源文件跳转
--- map({"v", "n"}, "go", "<cmd>ClangdSwitchSourceHeader<CR>", { silent = true })
--- map({"v", "n"}, "gO", "<cmd>split | ClangdSwitchSourceHeader<CR>", { silent = true })
--- map({"v", "n"}, "g<C-o>", "<cmd>vsplit | ClangdSwitchSourceHeader<CR>", { silent = true })
-
--- map({'n'}, '<S-Tab>', '<C-o>')
-
--- -- 查找符号定义
--- map("n", "gd", "<cmd>Telescope lsp_definitions<CR>", { desc = 'Goto definition' })
--- -- 查找符号声明
--- map("n", "gD", function()
---     vim.lsp.buf.declaration()
--- end, { desc = 'Goto declaration' })
-
