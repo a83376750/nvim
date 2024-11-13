@@ -1,0 +1,8 @@
+require("fanykeymaps")
+require("fanytelescope")
+require("fanyconfig")
+require("fanyformat")
+require("utils.fanyutils").set_os_info()
+require("fanysnippets")
+require("fanyneotree")
+require("fanytoggleterm")
