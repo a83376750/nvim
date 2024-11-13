@@ -1,6 +1,6 @@
 return {
     "smoka7/hop.nvim",
-    enabled = false, --禁用
+    --enabled = false, --禁用
     version = "*",
     opts = {},
     keys = {
