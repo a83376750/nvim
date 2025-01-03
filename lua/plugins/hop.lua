@@ -2,7 +2,7 @@ return {
     "smoka7/hop.nvim",
     --enabled = false, --禁用
     version = "*",
-    opts = {},
+    opts = { keys = 'etovxqpdygfblzhckisuran'},
     keys = {
       {
         "s",
@@ -10,12 +10,12 @@ return {
         mode = { "n", "v" },
         desc = "Hop hint words",
       },
-      {
-        "<S-s>",
-        -- function() require("hop").hint_lines() end,
-        mode = { "n" },
-        desc = "Hop hint lines",
-      },
+      -- {
+      --   "<S-s>",
+      --   function() require("hop").hint_lines() end,
+      --   mode = { "n" },
+      --   desc = "Hop hint lines",
+      -- },
       -- {
       --   "s",
       --   -- function() require("hop").hint_words { extend_visual = true } end,
